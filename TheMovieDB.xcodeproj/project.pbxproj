@@ -24,6 +24,8 @@
 		E8312B9322471CF70046D62B /* MovieGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8312B9222471CF70046D62B /* MovieGridView.swift */; };
 		E8312B9522471D1D0046D62B /* MovieGridViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8312B9422471D1D0046D62B /* MovieGridViewSpec.swift */; };
 		E8312B98224721860046D62B /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8312B97224721860046D62B /* UIColorExtension.swift */; };
+		E8312B9B22472DD40046D62B /* MovieGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8312B9A22472DD40046D62B /* MovieGridViewController.swift */; };
+		E8312B9E224735000046D62B /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8312B9D224735000046D62B /* MovieListViewModel.swift */; };
 		FA6874E8BAAA456890B0B9F9 /* Pods_TheMovieDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75309F800012981AC0B77C2E /* Pods_TheMovieDB.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,8 @@
 		E8312B9222471CF70046D62B /* MovieGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridView.swift; sourceTree = "<group>"; };
 		E8312B9422471D1D0046D62B /* MovieGridViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridViewSpec.swift; sourceTree = "<group>"; };
 		E8312B97224721860046D62B /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		E8312B9A22472DD40046D62B /* MovieGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridViewController.swift; sourceTree = "<group>"; };
+		E8312B9D224735000046D62B /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,8 @@
 		E8312B482246FDE20046D62B /* TheMovieDB */ = {
 			isa = PBXGroup;
 			children = (
+				E8312B9C224734EC0046D62B /* ViewModel */,
+				E8312B9922472DC20046D62B /* Controller */,
 				E8312B96224721780046D62B /* Extensions */,
 				E8312B9122471CE50046D62B /* View */,
 				E8312B8E22471CA70046D62B /* Protocols */,
@@ -554,6 +560,8 @@
 				E8312B9322471CF70046D62B /* MovieGridView.swift in Sources */,
 				E8312B7E224701550046D62B /* MovieDBService.swift in Sources */,
 				E8312B7C224700770046D62B /* Genre.swift in Sources */,
+				E8312B9B22472DD40046D62B /* MovieGridViewController.swift in Sources */,
+				E8312B9E224735000046D62B /* MovieListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
