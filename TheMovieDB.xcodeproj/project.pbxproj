@@ -27,6 +27,7 @@
 		E8312B9B22472DD40046D62B /* MovieGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8312B9A22472DD40046D62B /* MovieGridViewController.swift */; };
 		E8312B9E224735000046D62B /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8312B9D224735000046D62B /* MovieListViewModel.swift */; };
 		E86F03CA22483671007A11B7 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86F03C922483671007A11B7 /* UIImageExtension.swift */; };
+		E86F03CC22484231007A11B7 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86F03CB22484231007A11B7 /* MovieCell.swift */; };
 		FA6874E8BAAA456890B0B9F9 /* Pods_TheMovieDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75309F800012981AC0B77C2E /* Pods_TheMovieDB.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		E8312B9A22472DD40046D62B /* MovieGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridViewController.swift; sourceTree = "<group>"; };
 		E8312B9D224735000046D62B /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
 		E86F03C922483671007A11B7 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		E86F03CB22484231007A11B7 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +234,7 @@
 		E8312B9122471CE50046D62B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E8312BA32247A1880046D62B /* Cell */,
 				E8312B9222471CF70046D62B /* MovieGridView.swift */,
 			);
 			path = View;
@@ -587,6 +590,7 @@
 			files = (
 				E8312B4C2246FDE20046D62B /* ViewController.swift in Sources */,
 				E8312B9022471CC00046D62B /* CodeViewProtocol.swift in Sources */,
+				E86F03CC22484231007A11B7 /* MovieCell.swift in Sources */,
 				E8312B4A2246FDE20046D62B /* AppDelegate.swift in Sources */,
 				E8312B98224721860046D62B /* UIColorExtension.swift in Sources */,
 				E8312B7A2247006F0046D62B /* Movie.swift in Sources */,
