@@ -709,7 +709,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 971994B7BD98BBB009583CB6 /* Pods-TheMovieDBTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56DSU8JZV3;
@@ -731,7 +730,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3D1D2649AD83571D3F94AA3A /* Pods-TheMovieDBTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56DSU8JZV3;
@@ -753,7 +751,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5864B02B2A5894662B18750A /* Pods-TheMovieDBUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56DSU8JZV3;
 				INFOPLIST_FILE = TheMovieDBUITests/Info.plist;
@@ -774,7 +771,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C19C8DCE045B6D42EE4BE81B /* Pods-TheMovieDBUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56DSU8JZV3;
 				INFOPLIST_FILE = TheMovieDBUITests/Info.plist;
