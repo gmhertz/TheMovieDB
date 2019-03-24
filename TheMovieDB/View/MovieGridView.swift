@@ -13,19 +13,20 @@ final class MovieGridView: UIView{
     
     lazy var navigationBar: UINavigationBar = {
         let bar = UINavigationBar(frame: .zero)
+        bar.backgroundColor = .purple
         return bar
     }()
     
     lazy var searchBar: UISearchBar = {
         let bar = UISearchBar(frame: .zero)
-        bar.backgroundColor = .blue
+        bar.barTintColor = .newPink
+        bar.placeholder = "Search"
         return bar
     }()
-    
     lazy var movieCollection: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collection.backgroundColor = .red
+        collection.backgroundColor = .newPink
         return collection
     }()
     
@@ -58,6 +59,7 @@ extension MovieGridView: CodeView {
         searchBar.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.left.equalToSuperview()
+//            $0.top.equalToSuperview()
             $0.top.equalTo(navigationBar.snp.bottom)
         }
         
