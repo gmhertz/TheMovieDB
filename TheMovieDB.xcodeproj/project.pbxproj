@@ -26,6 +26,7 @@
 		E8312B98224721860046D62B /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8312B97224721860046D62B /* UIColorExtension.swift */; };
 		E8312B9B22472DD40046D62B /* MovieGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8312B9A22472DD40046D62B /* MovieGridViewController.swift */; };
 		E8312B9E224735000046D62B /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8312B9D224735000046D62B /* MovieListViewModel.swift */; };
+		E86F03CA22483671007A11B7 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86F03C922483671007A11B7 /* UIImageExtension.swift */; };
 		FA6874E8BAAA456890B0B9F9 /* Pods_TheMovieDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75309F800012981AC0B77C2E /* Pods_TheMovieDB.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,7 @@
 		E8312B97224721860046D62B /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		E8312B9A22472DD40046D62B /* MovieGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridViewController.swift; sourceTree = "<group>"; };
 		E8312B9D224735000046D62B /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
+		E86F03C922483671007A11B7 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,8 +241,33 @@
 			isa = PBXGroup;
 			children = (
 				E8312B97224721860046D62B /* UIColorExtension.swift */,
+				E86F03C922483671007A11B7 /* UIImageExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E8312B9922472DC20046D62B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E8312B9A22472DD40046D62B /* MovieGridViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E8312B9C224734EC0046D62B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E8312B9D224735000046D62B /* MovieListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E8312BA32247A1880046D62B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E86F03CB22484231007A11B7 /* MovieCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -568,6 +595,7 @@
 				E8312B7C224700770046D62B /* Genre.swift in Sources */,
 				E8312B9B22472DD40046D62B /* MovieGridViewController.swift in Sources */,
 				E8312B9E224735000046D62B /* MovieListViewModel.swift in Sources */,
+				E86F03CA22483671007A11B7 /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
