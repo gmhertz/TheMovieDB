@@ -23,6 +23,7 @@
 		E8312B9022471CC00046D62B /* CodeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8312B8F22471CC00046D62B /* CodeViewProtocol.swift */; };
 		E8312B9322471CF70046D62B /* MovieGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8312B9222471CF70046D62B /* MovieGridView.swift */; };
 		E8312B9522471D1D0046D62B /* MovieGridViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8312B9422471D1D0046D62B /* MovieGridViewSpec.swift */; };
+		E8312B98224721860046D62B /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8312B97224721860046D62B /* UIColorExtension.swift */; };
 		FA6874E8BAAA456890B0B9F9 /* Pods_TheMovieDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75309F800012981AC0B77C2E /* Pods_TheMovieDB.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		E8312B8F22471CC00046D62B /* CodeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewProtocol.swift; sourceTree = "<group>"; };
 		E8312B9222471CF70046D62B /* MovieGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridView.swift; sourceTree = "<group>"; };
 		E8312B9422471D1D0046D62B /* MovieGridViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridViewSpec.swift; sourceTree = "<group>"; };
+		E8312B97224721860046D62B /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 		E8312B482246FDE20046D62B /* TheMovieDB */ = {
 			isa = PBXGroup;
 			children = (
+				E8312B96224721780046D62B /* Extensions */,
 				E8312B9122471CE50046D62B /* View */,
 				E8312B8E22471CA70046D62B /* Protocols */,
 				E8312B7F224709470046D62B /* Supporting Files */,
@@ -224,6 +227,14 @@
 				E8312B9222471CF70046D62B /* MovieGridView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E8312B96224721780046D62B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E8312B97224721860046D62B /* UIColorExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -538,6 +549,7 @@
 				E8312B4C2246FDE20046D62B /* ViewController.swift in Sources */,
 				E8312B9022471CC00046D62B /* CodeViewProtocol.swift in Sources */,
 				E8312B4A2246FDE20046D62B /* AppDelegate.swift in Sources */,
+				E8312B98224721860046D62B /* UIColorExtension.swift in Sources */,
 				E8312B7A2247006F0046D62B /* Movie.swift in Sources */,
 				E8312B9322471CF70046D62B /* MovieGridView.swift in Sources */,
 				E8312B7E224701550046D62B /* MovieDBService.swift in Sources */,
