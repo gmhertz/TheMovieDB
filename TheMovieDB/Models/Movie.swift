@@ -38,3 +38,9 @@ extension Movie {
         releaseDate = try values.decode(String.self, forKey: .releaseDate)
     }
 }
+
+extension Movie: Equatable {
+    static func == (lhs: Movie, rhs: Movie) -> Bool{
+        return lhs.id == rhs.id
+    }
+}
