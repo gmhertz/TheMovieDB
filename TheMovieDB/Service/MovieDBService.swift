@@ -66,4 +66,32 @@ class MovieDBService {
         }
     }
     
+    
+    func getGenre() -> Observable<[Genre]> {
+        return Observable.create { observer -> Disposable in
+            guard let url = URL(string: self.baseURL + QueryType.movieGenre.rawValue + "api_key=" + self.apiKey) else {
+                observer.onError(MDBError.urlFailure)
+                return Disposables.create()
+            }
+            AF.request(url, method: .get).validate().responseJSON(completionHandler: { response in
+                switch response.result {
+                case .success(let value):
+                    guard let json = value as? [String: Any], let data = json["genres"] else {
+                        observer.onError(MDBError.parseError)
+                        return
+                    }
+                    if let newData = try? JSONSerialization.data(withJSONObject: data, options: .prettyPrinted){
+                        if let genres = try? JSONDecoder.init().decode([Genre].self, from: newData) {
+                            observer.onNext(genres)
+                        }
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    observer.onError(error)
+                }
+            })
+            return Disposables.create()
+        }
+    }
+    
 }
