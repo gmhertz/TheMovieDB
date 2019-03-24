@@ -14,6 +14,9 @@ final class MovieGridView: UIView{
     lazy var navigationBar: UINavigationBar = {
         let bar = UINavigationBar(frame: .zero)
         bar.backgroundColor = .purple
+        bar.barStyle = .black
+        bar.isTranslucent = true
+    
         return bar
     }()
     
@@ -23,9 +26,11 @@ final class MovieGridView: UIView{
         bar.placeholder = "Search"
         return bar
     }()
+    
     lazy var movieCollection: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collection.register(MovieCell.self, forCellWithReuseIdentifier: "moviePosterCell")
         collection.backgroundColor = .newPink
         return collection
     }()
@@ -93,7 +98,8 @@ extension MovieGridView: UICollectionViewDelegateFlowLayout {
             return CGSize.zero
         }
         
-        let width = collectionView.frame.width - layout.sectionInset.left - layout.sectionInset.right
-        return CGSize(width: width, height: 60)
+        let width = (collectionView.frame.width - layout.minimumInteritemSpacing - layout.sectionInset.left - layout.sectionInset.right)/2.0
+        let height = collectionView.frame.height * 0.35
+        return CGSize(width: width, height: height)
     }
 }
