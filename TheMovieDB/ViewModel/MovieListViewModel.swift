@@ -16,25 +16,35 @@ class MovieListViewModel {
     // Mark: output signals
     var movieSectionData = BehaviorSubject<[SectionOfMovieData]>(value: [])
     var genrers = PublishSubject<[Genre]>()
-    var movies: [Movie] = []
+    var movies: [Movie] = [] {
+        didSet {
+            movieSectionData.onNext([SectionOfMovieData(items: oldValue)])
+        }
+    }
     
+    // Mark: input signals
+    var shouldLoadMoreCharacters = PublishSubject<Bool>()
     
     init() {
         //bind movie genre
         service
             .getGenre()
-            .debug("fetch genre")
             .bind(to: genrers)
             .disposed(by: disposeBag)
         
-        
+        //first fetch to data
         service
             .getMovies()
-            .map { [SectionOfMovieData(items: $0)] }
-            .bind(to: movieSectionData)
+            .map { [unowned self] films in films.map{ self.movies.append($0) } }
+            .subscribe()
             .disposed(by: disposeBag)
         
-        
+        shouldLoadMoreCharacters
+            .distinctUntilChanged()
+            .flatMap { [unowned self] _ in self.service.getMovies() }
+            .map { [unowned self] films in films.map{ self.movies.append($0) } }
+            .subscribe()
+            .disposed(by: disposeBag)
 
     }
 }
@@ -44,9 +54,9 @@ class MovieListViewModel {
 struct SectionOfMovieData: Equatable {
     var items: [Movie]
     
-//    static func == (lhs: SectionOfMovieData, rhs: SectionOfMovieData) -> Bool {
-//        return lhs.items == rhs.items
-//    }
+    static func == (lhs: SectionOfMovieData, rhs: SectionOfMovieData) -> Bool {
+        return lhs.items == rhs.items
+    }
 }
 
 extension SectionOfMovieData: SectionModelType {
