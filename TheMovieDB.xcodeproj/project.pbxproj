@@ -20,6 +20,15 @@
 		E8312B7C224700770046D62B /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8312B7B224700770046D62B /* Genre.swift */; };
 		E8312B7E224701550046D62B /* MovieDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8312B7D224701550046D62B /* MovieDBService.swift */; };
 		E8312B81224709780046D62B /* MovieDataBaseKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8312B80224709780046D62B /* MovieDataBaseKey.plist */; };
+		E8312B9022471CC00046D62B /* CodeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8312B8F22471CC00046D62B /* CodeViewProtocol.swift */; };
+		E8312B9322471CF70046D62B /* MovieGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8312B9222471CF70046D62B /* MovieGridView.swift */; };
+		E8312B9522471D1D0046D62B /* MovieGridViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8312B9422471D1D0046D62B /* MovieGridViewSpec.swift */; };
+		E8312B98224721860046D62B /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8312B97224721860046D62B /* UIColorExtension.swift */; };
+		E8312B9B22472DD40046D62B /* MovieGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8312B9A22472DD40046D62B /* MovieGridViewController.swift */; };
+		E8312B9E224735000046D62B /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8312B9D224735000046D62B /* MovieListViewModel.swift */; };
+		E86F03CA22483671007A11B7 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86F03C922483671007A11B7 /* UIImageExtension.swift */; };
+		E86F03CC22484231007A11B7 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86F03CB22484231007A11B7 /* MovieCell.swift */; };
+		E8F0A33E2249399F00847153 /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F0A33D2249399F00847153 /* UIScrollViewExtension.swift */; };
 		FA6874E8BAAA456890B0B9F9 /* Pods_TheMovieDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75309F800012981AC0B77C2E /* Pods_TheMovieDB.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +76,15 @@
 		E8312B7B224700770046D62B /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		E8312B7D224701550046D62B /* MovieDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBService.swift; sourceTree = "<group>"; };
 		E8312B80224709780046D62B /* MovieDataBaseKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MovieDataBaseKey.plist; sourceTree = "<group>"; };
+		E8312B8F22471CC00046D62B /* CodeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewProtocol.swift; sourceTree = "<group>"; };
+		E8312B9222471CF70046D62B /* MovieGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridView.swift; sourceTree = "<group>"; };
+		E8312B9422471D1D0046D62B /* MovieGridViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridViewSpec.swift; sourceTree = "<group>"; };
+		E8312B97224721860046D62B /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		E8312B9A22472DD40046D62B /* MovieGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridViewController.swift; sourceTree = "<group>"; };
+		E8312B9D224735000046D62B /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
+		E86F03C922483671007A11B7 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		E86F03CB22484231007A11B7 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		E8F0A33D2249399F00847153 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +163,11 @@
 		E8312B482246FDE20046D62B /* TheMovieDB */ = {
 			isa = PBXGroup;
 			children = (
+				E8312B9C224734EC0046D62B /* ViewModel */,
+				E8312B9922472DC20046D62B /* Controller */,
+				E8312B96224721780046D62B /* Extensions */,
+				E8312B9122471CE50046D62B /* View */,
+				E8312B8E22471CA70046D62B /* Protocols */,
 				E8312B7F224709470046D62B /* Supporting Files */,
 				E8312B782247002D0046D62B /* Service */,
 				E8312B77224700260046D62B /* Models */,
@@ -162,6 +185,7 @@
 			children = (
 				E8312B5E2246FDE40046D62B /* TheMovieDBTests.swift */,
 				E8312B602246FDE40046D62B /* Info.plist */,
+				E8312B9422471D1D0046D62B /* MovieGridViewSpec.swift */,
 			);
 			path = TheMovieDBTests;
 			sourceTree = "<group>";
@@ -199,6 +223,57 @@
 				E8312B80224709780046D62B /* MovieDataBaseKey.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E8312B8E22471CA70046D62B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E8312B8F22471CC00046D62B /* CodeViewProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E8312B9122471CE50046D62B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E8312BA32247A1880046D62B /* Cell */,
+				E8312B9222471CF70046D62B /* MovieGridView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E8312B96224721780046D62B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E8312B97224721860046D62B /* UIColorExtension.swift */,
+				E86F03C922483671007A11B7 /* UIImageExtension.swift */,
+				E8F0A33D2249399F00847153 /* UIScrollViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E8312B9922472DC20046D62B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E8312B9A22472DD40046D62B /* MovieGridViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E8312B9C224734EC0046D62B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E8312B9D224735000046D62B /* MovieListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E8312BA32247A1880046D62B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E86F03CB22484231007A11B7 /* MovieCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,8 +421,12 @@
 				"${PODS_ROOT}/Target Support Files/Pods-TheMovieDBUITests/Pods-TheMovieDBUITests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
 				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+				"${BUILT_PRODUCTS_DIR}/iOSSnapshotTestCase/FBSnapshotTestCase.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -355,8 +434,12 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble_Snapshots.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -396,8 +479,12 @@
 				"${PODS_ROOT}/Target Support Files/Pods-TheMovieDBTests/Pods-TheMovieDBTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
 				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+				"${BUILT_PRODUCTS_DIR}/iOSSnapshotTestCase/FBSnapshotTestCase.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -405,8 +492,12 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble_Snapshots.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -423,18 +514,26 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TheMovieDB/Pods-TheMovieDB-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -493,10 +592,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8312B4C2246FDE20046D62B /* ViewController.swift in Sources */,
+				E8312B9022471CC00046D62B /* CodeViewProtocol.swift in Sources */,
+				E86F03CC22484231007A11B7 /* MovieCell.swift in Sources */,
 				E8312B4A2246FDE20046D62B /* AppDelegate.swift in Sources */,
+				E8312B98224721860046D62B /* UIColorExtension.swift in Sources */,
 				E8312B7A2247006F0046D62B /* Movie.swift in Sources */,
+				E8312B9322471CF70046D62B /* MovieGridView.swift in Sources */,
 				E8312B7E224701550046D62B /* MovieDBService.swift in Sources */,
 				E8312B7C224700770046D62B /* Genre.swift in Sources */,
+				E8312B9B22472DD40046D62B /* MovieGridViewController.swift in Sources */,
+				E8F0A33E2249399F00847153 /* UIScrollViewExtension.swift in Sources */,
+				E8312B9E224735000046D62B /* MovieListViewModel.swift in Sources */,
+				E86F03CA22483671007A11B7 /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +611,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8312B9522471D1D0046D62B /* MovieGridViewSpec.swift in Sources */,
 				E8312B5F2246FDE40046D62B /* TheMovieDBTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -709,7 +817,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 971994B7BD98BBB009583CB6 /* Pods-TheMovieDBTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56DSU8JZV3;
@@ -731,7 +838,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3D1D2649AD83571D3F94AA3A /* Pods-TheMovieDBTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56DSU8JZV3;
@@ -753,7 +859,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5864B02B2A5894662B18750A /* Pods-TheMovieDBUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56DSU8JZV3;
 				INFOPLIST_FILE = TheMovieDBUITests/Info.plist;
@@ -774,7 +879,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C19C8DCE045B6D42EE4BE81B /* Pods-TheMovieDBUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56DSU8JZV3;
 				INFOPLIST_FILE = TheMovieDBUITests/Info.plist;
