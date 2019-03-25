@@ -47,7 +47,7 @@ class MovieGridViewController: UIViewController {
         let dataSource = RxCollectionViewSectionedReloadDataSource<SectionOfMovieData>(
             configureCell: {  _, collectionView, indexPath, item -> UICollectionViewCell in
                 let cell: MovieCell = collectionView.dequeueReusableCell(withReuseIdentifier: "moviePosterCell", for: indexPath) as! MovieCell
-                cell.setup(posterPath: item.posterPath)
+                cell.setup(posterPath: item.posterPath ?? "")
                 cell.backgroundColor = .black
                 return cell
             }

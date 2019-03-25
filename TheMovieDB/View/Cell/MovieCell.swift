@@ -25,11 +25,15 @@ class MovieCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup(posterPath: String) {
+    func setup(posterPath: String = "") {
         //fill the image
-        let imageURL = "http://image.tmdb.org/t/p/w185/" + posterPath
-        print(imageURL)
-        image.getImageFromURL(url: imageURL)
+        if !posterPath.isEmpty {
+            let imageURL = "http://image.tmdb.org/t/p/w185/" + posterPath
+            image.getImageFromURL(url: imageURL)
+        } else {
+            image.image = UIImage(named: "movieDB")
+        }
+        
     }
 }
 
