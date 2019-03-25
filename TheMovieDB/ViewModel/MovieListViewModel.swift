@@ -23,7 +23,7 @@ class MovieListViewModel {
     }
     
     // Mark: input signals
-    var shouldLoadMoreCharacters = PublishSubject<Bool>()
+    var shouldLoadMoreMovies = PublishSubject<Bool>()
     
     init() {
         //bind movie genre
@@ -39,7 +39,7 @@ class MovieListViewModel {
             .subscribe()
             .disposed(by: disposeBag)
         
-        shouldLoadMoreCharacters
+        shouldLoadMoreMovies
             .distinctUntilChanged()
             .flatMap { [unowned self] _ in self.service.getMovies() }
             .map { [unowned self] films in films.map{ self.movies.append($0) } }

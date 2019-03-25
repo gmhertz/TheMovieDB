@@ -63,15 +63,19 @@ class MovieGridViewController: UIViewController {
             .movieCollection
             .rx.didScroll
             .map { [unowned self] _ in self.scene.movieCollection.isBouncingBottom }
-            .bind(to: viewModel.shouldLoadMoreCharacters)
+            .bind(to: viewModel.shouldLoadMoreMovies)
             .disposed(by: disposeBag)
         
         scene
             .movieCollection
             .rx
             .modelSelected(Movie.self)
-            .subscribe(onNext: { movie in
-                //send to detail view
+            .subscribe(onNext: {[unowned self] movie in
+                let detailController = MovieDetailController(movie: movie)
+                detailController.modalPresentationStyle = .overCurrentContext
+                detailController.modalTransitionStyle = .crossDissolve
+                print(movie.name)
+                self.present(detailController, animated: true, completion: nil)
             })
             .disposed(by: disposeBag)
 
