@@ -66,9 +66,14 @@ class MovieGridViewController: UIViewController {
             .bind(to: viewModel.shouldLoadMoreCharacters)
             .disposed(by: disposeBag)
         
-        
+        scene
+            .movieCollection
+            .rx
+            .modelSelected(Movie.self)
+            .subscribe(onNext: { movie in
+                //send to detail view
+            })
+            .disposed(by: disposeBag)
 
     }
-    
-
 }
