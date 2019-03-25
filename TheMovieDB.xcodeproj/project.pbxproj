@@ -30,6 +30,7 @@
 		E86F03CC22484231007A11B7 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86F03CB22484231007A11B7 /* MovieCell.swift */; };
 		E8F0A33E2249399F00847153 /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F0A33D2249399F00847153 /* UIScrollViewExtension.swift */; };
 		E8F0A34022495EAD00847153 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F0A33F22495EAD00847153 /* MovieDetailView.swift */; };
+		E8F0A3422249696B00847153 /* MovieDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F0A3412249696B00847153 /* MovieDetailController.swift */; };
 		E8F0A34422496B1300847153 /* MovieDetailViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F0A34322496B1300847153 /* MovieDetailViewSpec.swift */; };
 		FA6874E8BAAA456890B0B9F9 /* Pods_TheMovieDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75309F800012981AC0B77C2E /* Pods_TheMovieDB.framework */; };
 /* End PBXBuildFile section */
@@ -88,6 +89,7 @@
 		E86F03CB22484231007A11B7 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		E8F0A33D2249399F00847153 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
 		E8F0A33F22495EAD00847153 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
+		E8F0A3412249696B00847153 /* MovieDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailController.swift; sourceTree = "<group>"; };
 		E8F0A34322496B1300847153 /* MovieDetailViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -262,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				E8312B9A22472DD40046D62B /* MovieGridViewController.swift */,
+				E8F0A3412249696B00847153 /* MovieDetailController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 				E8F0A34022495EAD00847153 /* MovieDetailView.swift in Sources */,
 				E8312B4A2246FDE20046D62B /* AppDelegate.swift in Sources */,
 				E8312B98224721860046D62B /* UIColorExtension.swift in Sources */,
+				E8F0A3422249696B00847153 /* MovieDetailController.swift in Sources */,
 				E8312B7A2247006F0046D62B /* Movie.swift in Sources */,
 				E8312B9322471CF70046D62B /* MovieGridView.swift in Sources */,
 				E8312B7E224701550046D62B /* MovieDBService.swift in Sources */,
