@@ -57,6 +57,16 @@ class MovieGridViewController: UIViewController {
             .movieSectionData
             .bind(to: scene.movieCollection.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
+        
+        //load more movies
+        scene
+            .movieCollection
+            .rx.didScroll
+            .map { [unowned self] _ in self.scene.movieCollection.isBouncingBottom }
+            .bind(to: viewModel.shouldLoadMoreCharacters)
+            .disposed(by: disposeBag)
+        
+        
 
     }
     
