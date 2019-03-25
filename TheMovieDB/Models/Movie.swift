@@ -6,12 +6,12 @@
 //  Copyright © 2019 Günter Hertz. All rights reserved.
 //
 
-struct Movie: Codable {
+struct Movie: Decodable {
     let id: Int
     let name: String
     let overview: String
     let posterPath: String
-    let backdropPath: String
+    let backdropPath: String?
     let genrerIds: [Int]
     let releaseDate: String
 }
@@ -33,9 +33,11 @@ extension Movie {
         name = try values.decode(String.self, forKey: .name)
         overview = try values.decode(String.self, forKey: .overview)
         posterPath = try values.decode(String.self, forKey: .posterPath)
-        backdropPath = try values.decode(String.self, forKey: .backdropPath)
+        backdropPath = try values.decodeIfPresent(String.self, forKey: .backdropPath)
         genrerIds = try values.decode([Int].self, forKey: .genrerIds)
         releaseDate = try values.decode(String.self, forKey: .releaseDate)
+        
+        //print("ID: \(id)\nNAME: \(name)\nOVERVIEW: \(overview)\nBACKDROPPATH: \(backdropPath)\nPOSTERPATH: \(posterPath)\nRELEASEDATE: \(releaseDate)\nGENRERIDS: \(genrerIds)\n")
     }
 }
 
