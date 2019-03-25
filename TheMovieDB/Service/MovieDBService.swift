@@ -19,6 +19,7 @@ class MovieDBService {
         case urlFailure
         case parseError
         case undefined
+        case decodeFailure
     }
     
     private let baseURL = "https://api.themoviedb.org/3"
@@ -55,6 +56,8 @@ class MovieDBService {
                         if let newData = try? JSONSerialization.data(withJSONObject: data, options: .prettyPrinted) {
                             if let movies = try? JSONDecoder.init().decode([Movie].self, from: newData) {
                                 observer.onNext(movies)
+                            } else {
+                                observer.onError(MDBError.decodeFailure)
                             }
                         }
                     case .failure(let error):
