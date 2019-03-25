@@ -10,7 +10,7 @@ struct Movie: Decodable {
     let id: Int
     let name: String
     let overview: String
-    let posterPath: String
+    let posterPath: String?
     let backdropPath: String?
     let genrerIds: [Int]
     let releaseDate: String
@@ -32,7 +32,7 @@ extension Movie {
         id = try values.decode(Int.self, forKey: .id)
         name = try values.decode(String.self, forKey: .name)
         overview = try values.decode(String.self, forKey: .overview)
-        posterPath = try values.decode(String.self, forKey: .posterPath)
+        posterPath = try values.decodeIfPresent(String.self, forKey: .posterPath)
         backdropPath = try values.decodeIfPresent(String.self, forKey: .backdropPath)
         genrerIds = try values.decode([Int].self, forKey: .genrerIds)
         releaseDate = try values.decode(String.self, forKey: .releaseDate)
