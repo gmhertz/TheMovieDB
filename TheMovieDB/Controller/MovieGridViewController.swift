@@ -63,12 +63,29 @@ class MovieGridViewController: UIViewController {
             .movieCollection
             .rx.didScroll
             .map { [unowned self] _ in self.scene.movieCollection.isBouncingBottom }
-            .bind(to: viewModel.shouldLoadMoreCharacters)
+            .bind(to: viewModel.shouldLoadMoreMovies)
             .disposed(by: disposeBag)
         
-        
+        scene
+            .movieCollection
+            .rx
+            .modelSelected(Movie.self)
+            .asObservable()
+            .subscribe(onNext: {[unowned self] movie in
+                //find a better way
+                var genreNames: [String] = []
+                for gen in self.viewModel.movieGenres {
+                    if movie.genrerIds.contains(gen.id) {
+                        genreNames.append(gen.name)
+                    }
+                }
+                let detailController = MovieDetailController(movie: movie, genres: genreNames )
+                detailController.modalPresentationStyle = .overCurrentContext
+                detailController.modalTransitionStyle = .crossDissolve
+                print(movie.name)
+                self.present(detailController, animated: true, completion: nil)
+            })
+            .disposed(by: disposeBag)
 
     }
-    
-
 }
