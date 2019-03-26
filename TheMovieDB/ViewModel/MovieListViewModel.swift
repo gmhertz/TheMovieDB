@@ -15,7 +15,7 @@ class MovieListViewModel {
     
     // Mark: output signals
     var movieSectionData = BehaviorSubject<[SectionOfMovieData]>(value: [])
-    var genrers = PublishSubject<[Genre]>()
+    var movieGenres: [Genre] = []
     var movies: [Movie] = [] {
         didSet {
             movieSectionData.onNext([SectionOfMovieData(items: oldValue)])
@@ -29,7 +29,8 @@ class MovieListViewModel {
         //bind movie genre
         service
             .getGenre()
-            .bind(to: genrers)
+            .map { [unowned self] genres in genres.map { self.movieGenres.append($0) }}
+            .subscribe()
             .disposed(by: disposeBag)
         
         //first fetch to data
