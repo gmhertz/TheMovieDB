@@ -70,8 +70,16 @@ class MovieGridViewController: UIViewController {
             .movieCollection
             .rx
             .modelSelected(Movie.self)
+            .asObservable()
             .subscribe(onNext: {[unowned self] movie in
-                let detailController = MovieDetailController(movie: movie)
+                //find a better way
+                var genreNames: [String] = []
+                for gen in self.viewModel.movieGenres {
+                    if movie.genrerIds.contains(gen.id) {
+                        genreNames.append(gen.name)
+                    }
+                }
+                let detailController = MovieDetailController(movie: movie, genres: genreNames )
                 detailController.modalPresentationStyle = .overCurrentContext
                 detailController.modalTransitionStyle = .crossDissolve
                 print(movie.name)
