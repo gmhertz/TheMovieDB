@@ -12,11 +12,13 @@ import RxSwift
 
 class MovieDetailController: UIViewController {
     private var movie: Movie!
+    private var genres: [String]
     private var scene: MovieDetailView!
     private let disposeBag = DisposeBag()
     
-    init(movie: Movie) {
+    init(movie: Movie, genres: [String]) {
         self.movie = movie
+        self.genres = genres
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -36,6 +38,17 @@ class MovieDetailController: UIViewController {
             .tap
             .subscribe(onNext: { self.dismiss(animated: true, completion: nil) })
             .disposed(by: disposeBag)
+        
+        //fill the view info
+        scene.titleLabel.text = movie.name
+        scene.overview.text = movie.overview
+        scene.releaseLabel.text = movie.releaseDate
+        scene.genreLabel.text = genres.joined(separator: ", ")
+        if let path = movie.posterPath, path != nil {
+            let imageURL = "http://image.tmdb.org/t/p/w185/" + path
+            scene.poster.getImageFromURL(url: imageURL)
+        }
+        
     }
 
 }
