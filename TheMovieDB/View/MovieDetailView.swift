@@ -70,7 +70,7 @@ class MovieDetailView: UIView {
     lazy var titleLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.text = "INSIRA UM TITULO DE UM FILME SUFICIENTEMENTE GRANDE"
-//        label.font = UIFont.boldSystemFont(ofSize: 30)
+        label.font = UIFont.boldSystemFont(ofSize: 30)
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 3
         label.textAlignment = .center
@@ -89,6 +89,7 @@ class MovieDetailView: UIView {
         let label = UILabel(frame: .zero)
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 20
+        label.font = UIFont.boldSystemFont(ofSize: 18)
         label.textAlignment = .justified
         label.text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
         
@@ -98,6 +99,8 @@ class MovieDetailView: UIView {
     lazy var releaseLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.textAlignment = .left
+        label.font = UIFont.boldSystemFont(ofSize: 15)
+
         label.text = "AQUI VAI UMA DATA"
         return label
     }()
@@ -106,7 +109,8 @@ class MovieDetailView: UIView {
         let label = UILabel(frame: .zero)
         label.textAlignment = .left
         label.text = "Genres: "
-        
+        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.numberOfLines = 3
         return label
     }()
     
@@ -119,7 +123,6 @@ class MovieDetailView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
 }
 
 extension MovieDetailView: CodeView {
